@@ -12,8 +12,7 @@ const VideoCarousel = () => {
   const slides = [
     {
       id: 1,
-      videoUrl:
-        "https://joy.videvo.net/videvo_files/video/free/2012-12/small_watermarked/Bokeh_Spiral_Glow_Warm_preview.webm",
+      videoUrl: "/video/puja.webm",
       headline: "Book Your Puja with Verified Pandits!",
       subtext: "Customized rituals as per your tradition and needs",
       primaryCta: "Book Now",
@@ -22,7 +21,7 @@ const VideoCarousel = () => {
     {
       id: 2,
       videoUrl:
-        "https://joy.videvo.net/videvo_files/video/free/2015-08/small_watermarked/Fire_Spiral_preview.webm",
+        "/video/puja_vid.mp4",
       headline: "Your Destiny, Decoded by Experts!",
       subtext: "Get accurate guidance on career, marriage & finance",
       primaryCta: "Consult Now",
@@ -31,7 +30,7 @@ const VideoCarousel = () => {
     {
       id: 3,
       videoUrl:
-        "https://joy.videvo.net/videvo_files/video/free/2018-07/small_watermarked/180607_A_04_preview.webm",
+        "/video/astro.mp4",
       headline: "Celebrate Festivities with Divine Blessings!",
       subtext: "Navratri, Diwali, Ganesh Puja & more at your home or temple",
       primaryCta: "View Festival Pujas",
@@ -40,7 +39,7 @@ const VideoCarousel = () => {
     {
       id: 4,
       videoUrl:
-        "https://joy.videvo.net/videvo_files/video/free/2019-05/small_watermarked/190516_06_AZ-LAGOA-30_preview.webm",
+        "/image/contform.jpeg",
       headline: "Book Now & Get Special Discounts!",
       subtext: "Use code PUJA20 for flat 20% off on your first booking",
       primaryCta: "Apply Offer",
@@ -52,7 +51,7 @@ const VideoCarousel = () => {
     if (isPlaying) {
       const timer = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % slides.length);
-      }, 6000);
+      }, 10000);
       return () => clearInterval(timer);
     }
   }, [isPlaying]);
@@ -136,7 +135,7 @@ const VideoCarousel = () => {
         ))}
       </div>
 
-      {/* <div className="absolute bottom-8 right-8 flex space-x-4">
+      <div className="absolute bottom-8 right-8 flex space-x-4">
         <button
           onClick={() => setIsPlaying(!isPlaying)}
           className="rounded-full bg-white/10 p-3 text-white backdrop-blur-sm transition-colors hover:bg-white/20"
@@ -151,7 +150,7 @@ const VideoCarousel = () => {
         >
           {isMuted ? <FaVolumeMute size={20} /> : <FaVolumeUp size={20} />}
         </button>
-      </div> */}
+      </div>
 
       <button
         onClick={handlePrevSlide}
